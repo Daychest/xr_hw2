@@ -8,6 +8,7 @@ public class MagnifyingGlass : MonoBehaviour
     public Transform magnifyingGlassCameraTransform;
     public Camera magnifyingGlassCameraCamera;
     public Transform lens;
+    public Transform lens2;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class MagnifyingGlass : MonoBehaviour
     {
         //magnifyingGlassCamera.rotation = mainCamera.rotation;
         magnifyingGlassCameraTransform.LookAt(lens);
+        lens2.LookAt(magnifyingGlassCameraTransform);
         magnifyingGlassCameraCamera.nearClipPlane = Vector3.Distance(magnifyingGlassCameraTransform.position, lens.position);
     }
 }
