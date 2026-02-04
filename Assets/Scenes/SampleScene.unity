@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 393924841}
   - component: {fileID: 393924840}
   m_Layer: 0
-  m_Name: zoomCamera
+  m_Name: magnifyingGlassCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,8 +768,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1439586427}
-  magnifyingGlassCamera: {fileID: 393924843}
-  lense: {fileID: 382968023}
+  magnifyingGlassCameraTransform: {fileID: 393924843}
+  magnifyingGlassCameraCamera: {fileID: 393924842}
+  lens: {fileID: 382968023}
 --- !u!1 &1439586426
 GameObject:
   m_ObjectHideFlags: 0

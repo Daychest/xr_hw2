@@ -5,8 +5,9 @@ using UnityEngine;
 public class MagnifyingGlass : MonoBehaviour
 {
     public Transform mainCamera;
-    public Transform magnifyingGlassCamera;
-    public Transform lense;
+    public Transform magnifyingGlassCameraTransform;
+    public Camera magnifyingGlassCameraCamera;
+    public Transform lens;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class MagnifyingGlass : MonoBehaviour
     void Update()
     {
         //magnifyingGlassCamera.rotation = mainCamera.rotation;
-        magnifyingGlassCamera.LookAt(lense);
+        magnifyingGlassCameraTransform.LookAt(lens);
+        magnifyingGlassCameraCamera.nearClipPlane = Vector3.Distance(magnifyingGlassCameraTransform.position, lens.position);
     }
 }
