@@ -20,7 +20,7 @@ public class MagnifyingGlass : MonoBehaviour
     {
         //magnifyingGlassCamera.rotation = mainCamera.rotation;
         magnifyingGlassCameraTransform.LookAt(lens);
-        lens2.LookAt(magnifyingGlassCameraTransform);
+        lens.LookAt(magnifyingGlassCameraTransform);
         magnifyingGlassCameraCamera.nearClipPlane = Vector3.Distance(magnifyingGlassCameraTransform.position, lens.position);
     }
 }
