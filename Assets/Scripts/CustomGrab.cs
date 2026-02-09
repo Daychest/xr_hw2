@@ -40,6 +40,7 @@ public class CustomGrab : MonoBehaviour
                 // Save the position and rotation at the end of Update function, so you can compare previous pos/rot to current here
                 grabbedObject.position = transform.position;
                 grabbedObject.rotation = transform.rotation;
+                grabbedObject.Rotate(new Vector3(90, 0, 0));
             }
         }
         // If let go of button, release object
