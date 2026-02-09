@@ -284,7 +284,6 @@ GameObject:
   m_Component:
   - component: {fileID: 393924843}
   - component: {fileID: 393924842}
-  - component: {fileID: 393924841}
   - component: {fileID: 393924840}
   m_Layer: 0
   m_Name: magnifyingGlassCamera
@@ -337,14 +336,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &393924841
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393924839}
-  m_Enabled: 1
 --- !u!20 &393924842
 Camera:
   m_ObjectHideFlags: 0
@@ -529,12 +520,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!4 &564172738 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7109253585701121838, guid: 849ef981216b0cd4186587a7c585fff1,
-    type: 3}
-  m_PrefabInstance: {fileID: 741979660}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &725720209
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3242644416965603952, guid: 849ef981216b0cd4186587a7c585fff1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4214445573295357488, guid: 849ef981216b0cd4186587a7c585fff1,
         type: 3}
@@ -783,11 +773,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5caab9785436fc148954fba35d9a0a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 1439586427}
+  magnifyingGlass: {fileID: 329045014}
   magnifyingGlassCameraTransform: {fileID: 393924843}
   magnifyingGlassCameraCamera: {fileID: 393924842}
   lens: {fileID: 382968023}
-  lens2: {fileID: 564172738}
 --- !u!1 &1439586426
 GameObject:
   m_ObjectHideFlags: 0
