@@ -11,14 +11,13 @@ public class MagnifyingGlass : MonoBehaviour
     public Transform lens2;
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {        
+        lens.transform.rotation = Quaternion.Inverse(lens.transform.rotation);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //magnifyingGlassCamera.rotation = mainCamera.rotation;
         magnifyingGlassCameraTransform.LookAt(lens);
         lens.LookAt(magnifyingGlassCameraTransform);
         magnifyingGlassCameraCamera.nearClipPlane = Vector3.Distance(magnifyingGlassCameraTransform.position, lens.position);
