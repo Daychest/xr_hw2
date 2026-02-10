@@ -13,6 +13,7 @@ public class CustomGrab : MonoBehaviour
     public InputActionReference action;
     bool grabbing = false;
 
+    public InputActionReference doubleRotationButton;
     Vector3 lastPosition;
     Quaternion lastRotation;
 
@@ -22,6 +23,7 @@ public class CustomGrab : MonoBehaviour
         lastRotation = transform.rotation;
 
         action.action.Enable();
+        doubleRotationButton.action.Enable();
 
         // Find the other hand
         foreach (CustomGrab c in transform.parent.GetComponentsInChildren<CustomGrab>())
@@ -46,7 +48,12 @@ public class CustomGrab : MonoBehaviour
                 // Save the position and rotation at the end of Update function, so you can compare previous pos/rot to current here
 
                 Quaternion deltaRotation = transform.rotation * Quaternion.Inverse(lastRotation);
+
                 grabbedObject.rotation = deltaRotation * grabbedObject.rotation;
+                if (doubleRotationButton.action.IsPressed())
+                {
+                    grabbedObject.rotation = deltaRotation * grabbedObject.rotation;
+                }
 
                 Vector3 posDiff = lastPosition - grabbedObject.transform.position;
                 posDiff = deltaRotation * posDiff;
@@ -58,7 +65,6 @@ public class CustomGrab : MonoBehaviour
             grabbedObject = null;
 
         // Should save the current position and rotation here
-        //lastTransform = transform;
         lastPosition = transform.position;
         lastRotation = transform.rotation;
     }

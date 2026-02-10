@@ -753,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1514fb2110eca0b4db3bbecfaaacfef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: {fileID: 11711766586467970, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  action: {fileID: -1644001223835636349, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
   controller: {fileID: 1693976346}
   thingToGrab: {fileID: 329045014}
 --- !u!4 &1221575570
@@ -1578,6 +1578,8 @@ MonoBehaviour:
   nearObjects: []
   grabbedObject: {fileID: 0}
   action: {fileID: -5194266436686895582, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  doubleRotationButton: {fileID: 11711766586467970, guid: e0ca4504471ca124088e1e2cfe6804ae,
+    type: 3}
 --- !u!1 &1719865329
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,6 +2216,8 @@ MonoBehaviour:
   nearObjects: []
   grabbedObject: {fileID: 0}
   action: {fileID: -1289947363739713011, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  doubleRotationButton: {fileID: 5113088590926889233, guid: e0ca4504471ca124088e1e2cfe6804ae,
+    type: 3}
 --- !u!65 &2085652873
 BoxCollider:
   m_ObjectHideFlags: 0
