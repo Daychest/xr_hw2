@@ -45,10 +45,12 @@ public class CustomGrab : MonoBehaviour
                 // Change these to add the delta position and rotation instead
                 // Save the position and rotation at the end of Update function, so you can compare previous pos/rot to current here
 
-                grabbedObject.position += transform.position - lastPosition;
+                Quaternion deltaRotation = transform.rotation * Quaternion.Inverse(lastRotation);
+                grabbedObject.rotation = deltaRotation * grabbedObject.rotation;
 
-                Quaternion diff = transform.rotation * Quaternion.Inverse(lastRotation);
-                grabbedObject.rotation = diff * grabbedObject.rotation;
+                Vector3 posDiff = lastPosition - grabbedObject.transform.position;
+                posDiff = deltaRotation * posDiff;
+                grabbedObject.transform.position = transform.position - posDiff;
             }
         }
         // If let go of button, release object
