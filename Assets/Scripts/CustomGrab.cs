@@ -13,8 +13,14 @@ public class CustomGrab : MonoBehaviour
     public InputActionReference action;
     bool grabbing = false;
 
+    Vector3 lastPosition;
+    Quaternion lastRotation;
+
     private void Start()
     {
+        lastPosition = transform.position;
+        lastRotation = transform.rotation;
+
         action.action.Enable();
 
         // Find the other hand
@@ -38,9 +44,11 @@ public class CustomGrab : MonoBehaviour
             {
                 // Change these to add the delta position and rotation instead
                 // Save the position and rotation at the end of Update function, so you can compare previous pos/rot to current here
-                grabbedObject.position = transform.position;
-                grabbedObject.rotation = transform.rotation;
-                grabbedObject.Rotate(new Vector3(90, 0, 0));
+
+                grabbedObject.position += transform.position - lastPosition;
+
+                Quaternion diff = transform.rotation * Quaternion.Inverse(lastRotation);
+                grabbedObject.rotation = diff * grabbedObject.rotation;
             }
         }
         // If let go of button, release object
@@ -48,6 +56,9 @@ public class CustomGrab : MonoBehaviour
             grabbedObject = null;
 
         // Should save the current position and rotation here
+        //lastTransform = transform;
+        lastPosition = transform.position;
+        lastRotation = transform.rotation;
     }
 
     private void OnTriggerEnter(Collider other)
