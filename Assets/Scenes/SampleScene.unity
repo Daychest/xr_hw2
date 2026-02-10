@@ -1330,9 +1330,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1221575570}
-  - component: {fileID: 1221575569}
   - component: {fileID: 1221575571}
   - component: {fileID: 1221575572}
+  - component: {fileID: 1221575569}
+  - component: {fileID: 1221575573}
   m_Layer: 0
   m_Name: scriptExecutor
   m_TagString: Untagged
@@ -1352,9 +1353,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1514fb2110eca0b4db3bbecfaaacfef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  action: {fileID: -1644001223835636349, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
+  attractButton: {fileID: -1644001223835636349, guid: e0ca4504471ca124088e1e2cfe6804ae,
+    type: 3}
   controller: {fileID: 1693976346}
-  thingToGrab: {fileID: 329045014}
+  thingToAttract: {fileID: 329045014}
 --- !u!4 &1221575570
 Transform:
   m_ObjectHideFlags: 0
@@ -1398,6 +1400,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   printTransform: {fileID: 0}
+--- !u!114 &1221575573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221575568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1514fb2110eca0b4db3bbecfaaacfef5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attractButton: {fileID: -631344258065148156, guid: e0ca4504471ca124088e1e2cfe6804ae,
+    type: 3}
+  controller: {fileID: 2085652866}
+  thingToAttract: {fileID: 329045014}
 --- !u!1 &1385497288
 GameObject:
   m_ObjectHideFlags: 0
