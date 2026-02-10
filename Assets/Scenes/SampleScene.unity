@@ -802,6 +802,7 @@ GameObject:
   - component: {fileID: 1221575570}
   - component: {fileID: 1221575569}
   - component: {fileID: 1221575571}
+  - component: {fileID: 1221575572}
   m_Layer: 0
   m_Name: scriptExecutor
   m_TagString: Untagged
@@ -854,6 +855,19 @@ MonoBehaviour:
   magnifyingGlassCameraTransform: {fileID: 393924843}
   magnifyingGlassCameraCamera: {fileID: 393924842}
   lens: {fileID: 382968023}
+--- !u!114 &1221575572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221575568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d958221945c7544887e5db4fcad51b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  printTransform: {fileID: 0}
 --- !u!1 &1439586426
 GameObject:
   m_ObjectHideFlags: 0
